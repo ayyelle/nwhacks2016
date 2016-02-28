@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request,json,jsonify
+from flask import Flask, render_template, request,json,jsonify, redirect
 import urllib
 app = Flask(__name__)
 
@@ -6,6 +6,11 @@ app = Flask(__name__)
 def hello_world():
     return render_template("index.html");
 
+@app.route('/getact', methods = ['POST'])
+def signup():
+    acttype = request.form['acttype']
+    print(acttype)
+   # return redirect('/')
 
 if __name__ == '__main__':
     app.run()

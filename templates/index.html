@@ -2,81 +2,56 @@
 <html lang="en">
  
 <head>
-    <title>Python Flask Bucket List App</title>
+    <title>VanRoulette</title>
  
  
     <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
  
     <link href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
+    <link href="../static/style.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Knewave' rel='stylesheet' type='text/css'>
+
     
  
  
 </head>
  
 <body>
+
+<div class = "wrapper">
  
     <div class="container">
-        <div class="header">
-            <nav>
-                <ul class="nav nav-pills pull-right">
-                    <li role="presentation" class="active"><a href="#">Home</a>
-                    </li>
-                    <li role="presentation"><a href="#">Sign In</a>
-                    </li>
-                    <li role="presentation"><a href="showSignUp">Sign Up</a>
-                    </li>
-                </ul>
-            </nav>
-            <h3 class="text-muted">Python Flask App</h3>
+        <div class="header navbar-fixed-top navbar navbar-default" id="header">
+            <h1 class="cursive" id="title">VanRoulette</h1>
+            <h3>Feeling spontaneous? Let chance pick your destination.</h3>
         </div>
- 
-        <div class="jumbotron">
-            <h1>Bucket List App</h1>
-            <p class="lead"></p>
-            <p><a class="btn btn-lg btn-success" href="showSignUp" role="button">Sign up today</a>
-            </p>
-        </div>
- 
-        <div class="row marketing">
-            <div class="col-lg-6">
 
-                <div class="content">
-<div class="col">
-  <h2>My Skill</h2>
-    <ul id="skill">
-    <li><span class="expand java"></span><em>Java</em></li>
-    <li><span class="expand python"></span><em>Python</em></li>
-    <li><span class="expand javascript"></span><em>JavaScript</em></li>
-    <li><span class="expand html"></span><em>HTML 5</em></li>
-    <li><span class="expand css"></span><em>CSS</em></li>
-    </ul>
-</div>
-</div>
-                <h4>Bucket List</h4>
-                <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
- 
-                <h4>Bucket List</h4>
-                <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
- 
-                <h4>Bucket List</h4>
-                <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+
+
+        <form class="navbar-form navbar-right" action="/getact" method="post"> <div class="form-group" id="nav-form">
+        <nav class = "navbar-fixed-bottom navbar nav-bot navbar-inverse">
+            <p class="nav-text marg">I want to</p>
+      <select class="form-control btn-lg marg" name="acttype">
+  <option value="food">Eat something</option>
+  <option value="drink">Drink something</option>
+  <option value="spectate">Watch something</option>
+  <option value="outdoors">Outdoors something</option>
+  <option value="surprise">Surprise me</option>
+</select>
+            <p class="nav-text"> within</p>
+      <input type="number" class="form-control km-field marg" placeholder="0"> <p class="nav-text"> km</p>
+      <button type="button" class="btn btn-default navbar-btn marg">Go!</button>
+</nav>
             </div>
- 
-            <div class="col-lg-6">
-                <h4>Bucket List</h4>
-                <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
- 
-                <h4>Bucket List</h4>
-                <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
- 
-                <h4>Bucket List</h4>
-                <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
-            </div>
-        </div>
+            </form>
 
-        <div id ="map"></div>
 
-        <script> 
+
+<div id="body-container">
+
+        <div id ="map">
+
+        <script>
 
 function initMap() {
   var centreLat = 49.264
@@ -120,19 +95,17 @@ window.onload = setTimeout(initMap,1000);
 <script async defer
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCsHbib3aGBwsO6ySVqCJcZUaAQjtNlqsc&callback=initMap">
     </script>
- 
+
         <footer class="footer">
             <p>&copy; Company 2015</p>
         </footer>
- 
+
     </div>
 
-    <style type="text/css">
-     #map {
-        width: 500px;
-        height: 500px;
-      }
-    </style>
+        </div>
+</div>
+    </div>
+
 </body>
  
 </html>
