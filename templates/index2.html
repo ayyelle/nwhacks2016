@@ -57,7 +57,7 @@ function showPosition(position) {
             <p class="nav-text marg">I want to</p>
       <select class="form-control btn-lg marg" name="acttype">
   <option value="food">Eat something</option>
-  <option value="drink">Drink something</option>
+  <option value="bus">Get on a bus</option>
   <option value="spectate">Watch something</option>
   <option value="outdoors">Outdoors something</option>
   <option value="surprise">Surprise me</option>
@@ -79,8 +79,8 @@ function showPosition(position) {
 
 
 function initMap() {
-  var centreLat = 49.264
-  var centreLon = -123.116
+  var centreLat = {{latitude}};
+  var centreLon = {{longitude}};
   var latit = {{latitude}};
   var longi = {{longitude}};
   //var myLatLng = {lat: latit, lng: longi};
