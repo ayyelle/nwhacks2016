@@ -115,11 +115,31 @@ function initMap() {
 }
 
 window.onload = setTimeout(initMap,1000);
+
 </script>
 
 <script async defer
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCsHbib3aGBwsO6ySVqCJcZUaAQjtNlqsc&callback=initMap">
     </script>
+
+
+    <script> 
+    function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+    } else {
+       alert("Geolocation is not supported by this browser.");
+    }
+}
+function showPosition(position) {
+    alert("Latitude: " + position.coords.latitude + 
+    " Longitude: " + position.coords.longitude);
+    };
+
+    window.onload = setTimeout(getLocation,500);
+
+    </script>
+
  
         <footer class="footer">
             <p>&copy; Company 2015</p>
